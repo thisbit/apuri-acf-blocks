@@ -1,0 +1,124 @@
+figure {
+	margin: 0;
+}
+
+
+.slider,
+.wp-block-acf-slider {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.flickity-viewport,
+.acf-block-preview {
+	height: 75%;
+	min-height: 700px;
+	width: 100%;
+}
+
+.wp-block-acf-slider {
+	overflow-x: auto;
+	max-width: 100%;
+	margin: auto;
+}
+
+.wp-block-acf-slider .slider.is-admin {
+	display: flex;
+	flex-wrap: nowrap !important;
+	width: max-content !important;
+	min-width: 100%;
+}
+
+.acf-block-body {
+	min-width: 100%;
+}
+
+.please-add-some-slides {
+	padding: 1rem;
+	line-height: 3rem;
+	background: #ededed;
+	width: 100%;
+}
+
+.slider-cell {
+	height: 100%;
+	margin-right: 2rem;
+}
+
+.slider-image {
+	height: 100%;
+	width: auto;
+}
+.block-editor__container img.slider-image {
+	height: 100%;
+	width: auto;
+	max-height: 700px;
+}
+
+.flickity-prev-next-button {
+	top: 100%;
+	width: 90px;
+	height: 59px;
+	margin-top: 2rem;
+	border-radius: unset; 
+	transform: unset;
+	position: unset;
+	order: 2;
+}
+
+.flickity-button {
+	position: unset;
+	background: none;
+	border: none;
+	color: #333;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.flickity-page-dots {
+	position: unset;
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+	margin-right: auto;
+	margin-left: .5rem;
+	margin-top: 2rem;
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+	position: unset;
+	width: 100%;
+	height: 100%;
+}
+
+.flickity-prev-next-button .flickity-button-icon path {
+	stroke: #ccc;
+}
+
+.flickity-prev-next-button:hover .flickity-button-icon path,
+.flickity-prev-next-button:focus .flickity-button-icon path {
+	stroke: #222 !important;
+}
+
+.flickity-button.next .flickity-button-icon path {
+	transform: translate(90px, 77px) rotate(180deg);
+	stroke: #ccc;
+}
+.flickity-button.previous .flickity-button-icon path {
+	transform: translate(0px, 17px);
+}
+
+button.flickity-page-dot:focus,
+button.flickity-prev-next-button:focus {
+	outline: solid black 2px;
+	box-shadow: none !important;
+}
+
+.flickity-page-dot.is-selected,
+.flickity-page-dot:focus,
+.flickity-page-dot:hover {
+		background: #FF5E5E;
+}
