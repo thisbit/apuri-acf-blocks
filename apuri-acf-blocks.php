@@ -41,6 +41,7 @@ if ( ! class_exists( 'acf')  ) {
  */
 else {
 
-	include_once( APURI_BLOCKS_PATH . 'inc/registration.php' ); //
+	include_once( APURI_BLOCKS_PATH . 'inc/registration.php' );
+	include_once( APURI_BLOCKS_PATH . 'shortcodes/slider.php' );
 
 }
