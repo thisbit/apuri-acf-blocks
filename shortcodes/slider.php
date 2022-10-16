@@ -70,6 +70,7 @@ add_shortcode( 'apuri_slider', 'apuri_slider_shortcode' );
   */
 function apuri_enqueue_slider_shortcode() {
 	global $generate_elements;
+	if ( $generate_elements ) :
 	foreach ( $generate_elements as $generate_element ) {
 		if ( $generate_element['id'] === 20014 ) {
 			wp_enqueue_style( 'flickity-css',  APURI_BLOCKS_URL . '/assets/lib/flickity.min.css',                APURI_BLOCKS_VERSION );
@@ -80,5 +81,6 @@ function apuri_enqueue_slider_shortcode() {
 			endif;
 		}
 	}
+endif;
 }
 add_action( 'wp_enqueue_scripts', 'apuri_enqueue_slider_shortcode', 9999 );
