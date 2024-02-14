@@ -22,16 +22,18 @@ if( !empty($block['align']) ) {
 if( $is_preview ) {
     $className .= ' is-admin';
 }
-?>
+
+// do not show slider if no fields have value
+if (is_admin() || have_rows('apuri_image_slides')) : ?>
 
 <figure id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <?php if( have_rows('apuri_image_slides') ): ?>
 			<?php while( have_rows('apuri_image_slides') ): the_row(); 
 				$image = get_sub_field('apuri_slide_image');
-				$caption = wp_get_attachment_caption( $image['id'], 'full slider-image' );
+				$caption = wp_get_attachment_caption( $image['id'], 'large slider-image' );
 				?>
 				<figure class="slider-cell <?php  if ($caption) : _e('has-caption'); endif; ?> ">
-					<?php echo wp_get_attachment_image( $image['id'], 'full slider-image' ); ?>
+					<?php echo wp_get_attachment_image( $image['id'], 'large', '', array( "class" => "slider-image" ) ); ?>
 					<?php if ($caption) : ?>
 						<figcaption class="slider-caption"><?php echo $caption; ?></figcaption>
 					<?php endif; ?>
@@ -43,4 +45,4 @@ if( $is_preview ) {
 </figure>
 
 <?php
-
+endif;
